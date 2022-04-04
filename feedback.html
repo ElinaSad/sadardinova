@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Обратная связь</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <section class="wrapper">
+        <form id="form" action="#">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 orderInfo">
+                            <h5>Оставьте свою заявку на фотосессию</h5>
+                            <div class="row">
+                                <div class="col-md-4">Фамилия и имя:</div>
+                                <div class="col-md-4"><input class="form-control" id="name" type="text" onblur="checkName();" required /></div>
+                                <div class="col-md-4"><span id="name_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">E-mail:</div>
+                                <div class="col-md-4"><input class="form-control" id="mail" type="email" onblur="checkMail();" required /></div>
+                                <div class="col-md-4"><span id="mail_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Номер телефона:</div>
+                                <div class="col-md-4"><input class="form-control" id="phone" type="text" onblur="checkPhone();" placeholder="8 (xxx) xxx-xx-xx" required /></div>
+                                <div class="col-md-4"><span id="phone_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Дата и время:</div>
+                                <div class="col-md-4">
+                                    <input class="form-control" id="date" type="date" required />
+                                    <input class="form-control" id="time" type="time" required />
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Выберите тип фотосессии:</div>
+                                <div class="col-md-4">                                    
+                                    <select class="form-control" name="typephoto" id="typephoto" required>
+                                        <option>Семейная фотосъемка</option>
+                                        <option>Свадебная фотосъемка</option>
+                                        <option>Рекламная фотосъемка</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 order"><span id="sendOrder" onclick="outputData();">Отправить</span></div>
+                            </div>
+
+                            <a span id="clicker" onclick="ChangeColor(this);">Нажать, чтобы изменить цвет ниже</span></a>
+                            <p id = "lol" style = "color: green;">Здесь меняется цвет</p>
+
+                            <a span id="clicker" onclick="Showhide('sun'); returnfalse;" >Нажать, чтобы увидеть или спрятать солнышко</span></a>
+                        <div id="sun" style="display: none;">
+                            <img src="https://sun9-67.userapi.com/zRUFMzfXQv_Kpj0fZ5ouCHah-mL-WC8b--hewA/fVTzEvHVW60.jpg" alt="" />
+                        </div>
+                        </div>
+
+                        <div class="col-md-4 orderSummary">                        
+                            <div class="col-md-12">
+                                <span id="summary"></span>
+                            </div>
+                        </div>
+
+                </div>
+            </div>            
+        </form>
+
+
+    </section>
+</body>
+</html>
